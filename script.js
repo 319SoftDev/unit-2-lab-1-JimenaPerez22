@@ -52,15 +52,14 @@ console.log("The three siblings are " + sibling1 + ", " + sibling2 + ", and " + 
 
 // 7. Use console.log() and a built-in method to count how many characters are in Ricardo's name.
 
-function characters (x){
-    return x.length;
-} 
-
-console.log( characters("Ricardo") );
+console.log("Ricardo".length);
 
 // 8. Use console.log() and a built-in method to print out the string "RICARDO MONTOYA DE LA ROSA RAMIREZ"
+ 
+console.log(sibling3.toUpperCase());
 
 // 9. Use console.log() and a built-in method to print out the string "ricardo montoya de la rosa ramirez"
+console.log(sibling3.toLowerCase());
 
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
 
