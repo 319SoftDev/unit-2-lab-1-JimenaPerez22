@@ -63,30 +63,40 @@ console.log(sibling3.toLowerCase());
 
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
 
+console.log(sibling3.replaceAll("a" , "n"));
 // 11. Use console.log() and a built-in method to print out "De La Rosa"
+console.log(sibling3.substring(16 , 26 ))
 
 // Medium Challenges
 
 // 12. Rewrite these function as an arrow function.
 /// Then, call them with different inputs to check the result.
 
-function getRandomNum() {
-    return Math.floor(Math.random() * 100);
-}
-
-function greeting(name) {
-    return `Hello ${name}, I'm glad you can make it!`;
-}
-
-function perfectRoot(x) {
-    let root = Math.sqrt(x);
-    if (Math.floor(root) === root) {
-        return root;
-    } else {
-        return "No perfect root"
+const getRandomNum2 = () =>
+    function getRandomNum() {
+        return Math.floor(Math.random() * 100);
     }
-}
 
+
+const greeting2 = (name) =>
+    function greeting(name) {
+        return `Hello ${name}, I'm glad you can make it!`;
+    }
+
+console.log("chris")
+
+
+const perfectRoot2 = (x) =>
+    function perfectRoot(x) {
+        let root = Math.sqrt(x);
+        if (Math.floor(root) === root) {
+            return root;
+        } else {
+            return "No perfect root"
+        }
+    }
+
+console.log(perfectRoot2(60))
 // 13. Fix/Finish the following functions.
 /// Then, call them with at least 2 different inputs to ensure they work.
 
