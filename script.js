@@ -165,8 +165,16 @@ let soda = 1.99;
 /// If no burgers can be bought, return "Sorry, no burgers for you."
 
 const buyBurgers = (budget) => {
+    if (budget < burger){
+        return "Sorry, no burgers for you.";
+    }else{
+        let numberBurg = Math.floor(budget / burger) ;
+        return "You can buy "+ numberBurg + " burger";
+    }
     
 }
+
+console.log(buyBurgers(6));
 
 // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
 /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
