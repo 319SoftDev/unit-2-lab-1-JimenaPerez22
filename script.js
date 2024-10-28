@@ -72,22 +72,27 @@ console.log(sibling3.substring(16 , 26 ))
 // 12. Rewrite these function as an arrow function.
 /// Then, call them with different inputs to check the result.
 
-const getRandomNum2 = () =>
-    function getRandomNum() {
+const RandomNum2 = (e) => {
         return Math.floor(Math.random() * 100);
     }
 
 
-const greeting2 = (name) =>
-    function greeting(name) {
+console.log(RandomNum2());
+console.log(RandomNum2());
+console.log(RandomNum2());
+
+
+
+const greeting2 = (name) =>{
         return `Hello ${name}, I'm glad you can make it!`;
     }
 
-console.log("chris")
+console.log(greeting2("Mix"));
+console.log(greeting2("Leaf"));
 
 
-const perfectRoot2 = (x) =>
-    function perfectRoot(x) {
+
+const perfectRoot2 = (x) =>{
         let root = Math.sqrt(x);
         if (Math.floor(root) === root) {
             return root;
@@ -96,47 +101,58 @@ const perfectRoot2 = (x) =>
         }
     }
 
-console.log(perfectRoot2(60))
+console.log(perfectRoot2(25));
+console.log(perfectRoot2(4));
+
 // 13. Fix/Finish the following functions.
 /// Then, call them with at least 2 different inputs to ensure they work.
 
 /// a. Adds 2 numbers and returns the sum
 const addNums = (x, y) => {
     let sum = x + y;
+    return sum;
 }
-// uncomment the line below, to call the function, and add one more function call
-// console.log( addNums(4, 6) );
+console.log(addNums(4 , 5));
 
+// uncomment the line below, to call the function, and add one more function call
+console.log( addNums(4, 6) );
+console.log(addNums(10 , 38));
 
 /// b. Prints a special message if name is "Beyonce"
 const isBeyonce = (name) => {
-    if(X) { 
+    if(name == "Beyonce") { 
         return "Welcome Queen!";
     } else {
-        return `Sorry {name}, you're not Beyonce`;
+        return `Sorry ${name}, you're not Beyonce`;
     }
 }
 // Test "Beyonce" and other names to ensure it works
 
-
+console.log(isBeyonce("Beyonce"));
+console.log(isBeyonce("Joe"));
 
 /// c. If the number is even, return the number divided by 2, otherwise, return the number
 /// For example reduceEvens(10) => 5 -- reduceEvens(11) => 11
 const reduceEvens = (x) => {
-    if(X ){
-
+    if(x % 2 === 0){
+        return x / 2;
     } else {
         return x;
     }
 }
 //Write your own function calls
-
+console.log(reduceEvens (6));
+console.log(reduceEvens (27));
 
 // 14. Write a function called shortenString(string) that returns the first 10 characters of a string if it is longer than 10
 //remove all
 const shortenString = (string) => {
+    if (string.length > 10){
+        return string.substring (0, 10);
+    }
+};
 
-}
+console.log(shortenString("Hello, everyone!"))
 
 
 
@@ -149,15 +165,19 @@ let soda = 1.99;
 /// If no burgers can be bought, return "Sorry, no burgers for you."
 
 const buyBurgers = (budget) => {
-
+    
 }
 
 // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
 /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
 /// Bonus: Round the answer to the nearest penny.
 const buyMeals = (budget) => {
-
+    let oneMeal = burger + fries + soda;
+    let Meals = Math.floor(budget / oneMeal) ; 
+    let leftOver = budget - Meals * oneMeal;
+    return "You can buy " + Meals +" meals and you have $" + leftOver + "left over.";
 }
+console.log(buyMeals(68));
 
 
 // 17. [Challenge] Write a function missingLeg(side1, side2) that takes in the length of a hypotenuse and a leg of a right triangle and prints out the missing leg's length
